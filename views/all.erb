@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8' />
+    <title>OitnB Ranker</title>
+    <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css' rel='stylesheet' />
+  </head>
+  <body class='container'>
+    <h1>Every Character</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Picture</th>
+        <th>Main or recurring?</th>
+      </tr>
+      <% @list.each do |i| %>
+        <tr>
+          <td><%= i[:char_name] %></td>
+          <td><img src="<%= i[:image] %>" alt="<%= i[:char_name] %>"></td>
+          <td><%= i[:cast] %></td>
+        </tr>
+      <% end %>
+
+    </table>
+    
+    <button type='submit' action='rank' class='btn btn-primary'>Rank all the characters!</button>
+    <button type='submit' class='btn btn-primary'>Rank only the main cast!</button>
+    </form>
+  </body>
+</html>
